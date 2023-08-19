@@ -21,13 +21,30 @@ const PostsTable = ({ posts }: PostsTableProps) => {
   ];
 
   return (
-    <DataGrid
-      rows={posts}
-      columns={columns}
-      pageSize={10}
-      autoHeight
-      sx={{ width: "900px", marginTop: "16px" }}
-    />
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+        padding: "16px",
+      }}
+    >
+      <div style={{ width: "100%", maxWidth: "900px" }}>
+        <DataGrid
+          rows={posts}
+          columns={columns}
+          autoHeight
+          initialState={{
+            pagination: {
+              paginationModel: {
+                pageSize: 25,
+              },
+            },
+          }}
+        />
+      </div>
+    </div>
   );
 };
 

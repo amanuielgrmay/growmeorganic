@@ -27,13 +27,21 @@ const FirstPage = () => {
   };
 
   return (
-    <div style={{ display: "flex", alignContent: "center" }}>
+    <div
+      style={{
+        display: "flex",
+        alignContent: "center",
+        justifyContent: "center",
+      }}
+    >
       <Box
         component="form"
         onSubmit={handleSubmit}
         sx={{
           display: "flex",
           flexDirection: "column",
+          width: "100%",
+          maxWidth: "400px",
           margin: "40px auto",
           padding: 10,
           border: "1px solid #ccc",
@@ -41,7 +49,7 @@ const FirstPage = () => {
         }}
       >
         <TextField
-          sx={{ width: 330 }}
+          sx={{ width: "100%", maxWidth: "450px", marginBottom: "10px" }}
           label="Name"
           name="name"
           value={formData.name}
@@ -50,7 +58,7 @@ const FirstPage = () => {
           margin="normal"
         />
         <TextField
-          sx={{ width: 330 }}
+          sx={{ width: "100%", maxWidth: "450px", marginBottom: "10px" }}
           label="Phone number"
           name="phoneNumber"
           value={formData.phoneNumber}
@@ -59,7 +67,7 @@ const FirstPage = () => {
           margin="normal"
         />
         <TextField
-          sx={{ width: 330 }}
+          sx={{ width: "100%", maxWidth: "450px", marginBottom: "10px" }}
           label="Email"
           name="email"
           type="email"
@@ -72,7 +80,7 @@ const FirstPage = () => {
           type="submit"
           variant="contained"
           color="primary"
-          sx={{ marginTop: "16px" }}
+          sx={{ marginTop: "16px", width: "100%", maxWidth: "450px" }}
         >
           Next
         </Button>

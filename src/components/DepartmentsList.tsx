@@ -206,7 +206,16 @@ const DepartmentsList = () => {
     ]);
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", marginTop: "16px" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        margin: "8px auto",
+        padding: ["8px", "16px"],
+        backgroundColor: "#f0f0f0",
+        maxWidth: "600px",
+      }}
+    >
       {renderDepartments()}
     </Box>
   );

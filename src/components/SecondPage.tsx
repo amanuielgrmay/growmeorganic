@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import PostsTable from "./PostsTable";
 import DepartmentsList from "./DepartmentsList";
 
@@ -35,35 +35,69 @@ const SecondPage = () => {
     <Box
       sx={{
         display: "flex",
-        flexDirection: "column",
         alignItems: "center",
-        marginTop: "50px",
+        justifyContent: "center",
       }}
     >
-      <Typography variant="h5" gutterBottom>
-        Welcome to the Second Page!
-      </Typography>
-      <Typography variant="body1" gutterBottom>
-        Here are your details:
-      </Typography>
-      <Typography variant="body2" gutterBottom>
-        Name: {userData?.name || "N/A"}
-      </Typography>
-      <Typography variant="body2" gutterBottom>
-        Phone number: {userData?.phoneNumber || "N/A"}
-      </Typography>
-      <Typography variant="body2" gutterBottom>
-        Email: {userData?.email || "N/A"}
-      </Typography>
-      <Typography variant="body1" gutterBottom sx={{ marginTop: "16px" }}>
-        Here are some posts from an API:
-      </Typography>
-      <PostsTable posts={posts} />
-      <Typography variant="body1" gutterBottom sx={{ marginTop: "16px" }}>
-        Here are some departments and subDepartments:
-      </Typography>
-
-      <DepartmentsList />
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            Welcome to the Second Page!
+          </Typography>
+          <Typography
+            variant="body1"
+            gutterBottom
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            Here are your details:
+          </Typography>
+          <Typography
+            variant="body2"
+            gutterBottom
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            Name: {userData?.name || "N/A"}
+          </Typography>
+          <Typography
+            variant="body2"
+            gutterBottom
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            Phone number: {userData?.phoneNumber || "N/A"}
+          </Typography>
+          <Typography
+            variant="body2"
+            gutterBottom
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            Email: {userData?.email || "N/A"}
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography
+            variant="body1"
+            gutterBottom
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            Here are some posts from an API:
+          </Typography>
+          <PostsTable posts={posts} />
+        </Grid>
+        <Grid item xs={12}>
+          <Typography
+            variant="body1"
+            gutterBottom
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            Here are some departments and subDepartments:
+          </Typography>
+          <DepartmentsList />
+        </Grid>
+      </Grid>
     </Box>
   );
 };

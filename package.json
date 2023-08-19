@@ -2,7 +2,7 @@
   "name": "user_app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://amanuielgrmay.github.io/assignment_int",
+  "homepage": "https://github.com/amanuielgrmay/growmeorganic",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
